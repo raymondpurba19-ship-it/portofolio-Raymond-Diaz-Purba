@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-/* ===== Reset & Base ===== */
+/* ===== RESET & BASE ===== */
 html, body {
     margin: 0;
     padding: 0;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 500;
-    font-style: normal;
     text-transform: uppercase;
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .wrapper {
-    width: 1024px;
+    width: 90%;
+    max-width: 1024px;
     margin: auto;
     padding: 20px 0;
 }
@@ -25,45 +27,35 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-}
-
-nav > .wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 20px;
     align-items: center;
+    padding: 10px 20px;
 }
 
-.menu {
-    width: 50%;
+nav .logo img {
+    height: 80px;
 }
 
-.menu > ul {
+nav .menu ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.menu > ul > li > a {
+nav .menu ul li a {
     text-decoration: none;
     color: #ffce10;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo > img {
-    height: 100px;
+    font-size: 18px;
 }
 
 /* ===== HEADER / JUMBOTRON ===== */
 header {
     background: url("../image/ttt.jpg") center center / cover no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -73,7 +65,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 4px;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-    padding: 0 20px; 
+    padding: 60px 20px;
     position: relative;
 }
 
@@ -99,14 +91,13 @@ header {
     flex-direction: column;
 }
 
-.header-jumbotron > h4 {
+.header-jumbotron h4 {
     color: #ffce10;
     font-size: 30px;
     margin: 0;
-    padding: 0;
 }
 
-.header-jumbotron > h5 {
+.header-jumbotron h5 {
     color: white;
     margin: 1px;
     padding: 6px;
@@ -116,7 +107,7 @@ header {
     text-transform: uppercase;
 }
 
-.header-jumbotron > p {
+.header-jumbotron p {
     padding: 5px;
     margin: 0 5px 30px 5px;
     color: #F8F5E9;
@@ -218,6 +209,7 @@ header {
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
 }
 
 .about-photo img {
@@ -339,52 +331,34 @@ a {
 
 /* ===== RESPONSIVE HP ===== */
 @media (max-width: 768px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     /* Nav */
     nav {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding: 10px 0;
     }
 
-    nav img {
-        width: 80px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    nav ul {
+    nav .menu ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    nav a {
+    nav .menu ul li a {
         font-size: 14px;
     }
 
     /* Header */
     header {
-        height: 100vh;
-        padding: 20px;
-        text-align: center;
-        background-position: center top;
-        background-size: cover;
+        padding: 40px 15px;
         justify-content: flex-end;
-        padding-bottom: 60px;
+        min-height: auto;
     }
 
     header h1 {
-        font-size: 32px;
-        line-height: 1.2;
+        font-size: 28px;
     }
 
     header h2, header p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .button, .button-xl {
@@ -396,7 +370,7 @@ a {
     .about-container {
         flex-direction: column;
         text-align: center;
-        padding: 30px;
+        padding: 20px;
     }
 
     .about-photo img {
