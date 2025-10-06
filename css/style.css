@@ -191,32 +191,37 @@ header {
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center content */
 }
 
-/* Tambahan untuk setiap jenjang pendidikan */
 .education-group {
-    margin-bottom: 50px; /* jarak antar jenjang */
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center judul & grid */
 }
 
 .education-group h3 {
     font-size: 22px;
     color: #444;
-    margin-bottom: 20px; /* beri jarak dengan card */
+    margin-bottom: 20px; /* jarak antar judul & card */
     border-bottom: 2px solid #999;
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* Grid card */
 .education-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* center semua card */
     gap: 25px;
     margin-top: 20px;
+    width: 100%;
 }
 
-/* Card individual */
 .education-card {
     background: #fff;
     width: 180px;
