@@ -109,6 +109,10 @@ header {
 }
 
 /* ===== BUTTONS ===== */
+.header-jumbotron .button-xl {
+    margin-top: 30px; /* jarak bawah ke tulisan header */
+}
+
 .button {
     background-color: #ffce10;
     padding: 10px 20px;
@@ -188,12 +192,12 @@ header {
     max-width: 1000px;
     background-color: #ffce10;
     border-radius: 20px;
-    padding: 40px 20px;
+    padding: 60px 20px; /* tambah padding atas bawah */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* center container */
+    align-items: center;
 }
 
 .education-group {
@@ -201,13 +205,13 @@ header {
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* center judul & grid */
+    align-items: center;
 }
 
 .education-group h3 {
     font-size: 22px;
     color: #444;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0; /* jarak atas bawah */
     border-bottom: 2px solid #999;
     display: inline-block;
     padding-bottom: 5px;
@@ -216,9 +220,8 @@ header {
 .education-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* semua card center */
+    justify-content: center; /* center semua card */
     gap: 25px;
-    margin-top: 20px;
     width: 100%;
 }
 
