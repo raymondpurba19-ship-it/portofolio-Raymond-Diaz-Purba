@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 /* ===== RESET & BASE ===== */
-html, body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    scroll-behavior: smooth;
+}
+
+html, body {
     width: 100%;
     overflow-x: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -41,9 +43,8 @@ nav .logo img {
 nav .menu ul {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav .menu ul li a {
@@ -62,15 +63,14 @@ header {
     align-items: center;      
     text-align: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 4px;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-    padding: 60px 20px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.8);
+    padding: 60px 20px; /* desktop padding */
     position: relative;
 }
 
 .header-opacity {
-    background-color: #1A1A19;  
+    background-color: #1A1A19;
     width: 100%;
     height: 100%;
     opacity: 0.4;
@@ -80,182 +80,114 @@ header {
 }
 
 .header-jumbotron {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-jumbotron h4 {
     color: #ffce10;
     font-size: 30px;
-    margin: 0;
 }
 
 .header-jumbotron h5 {
     color: white;
-    margin: 1px;
-    padding: 6px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1.1;
     font-family: "Roboto Slab", serif;
     text-transform: uppercase;
 }
 
 .header-jumbotron p {
-    padding: 5px;
-    margin: 0 5px 30px 5px;
     color: #F8F5E9;
     font-size: 20px;
     text-transform: lowercase;
+    margin-top: 10px;
 }
 
 /* ===== BUTTONS ===== */
 .button {
     background-color: #ffce10;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-family: "Roboto Slab", serif;
+    cursor: pointer;
     transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
 }
 
 .button-xl {
     font-size: 40px;
-    padding: 20px;
-}
-
-/* ===== STATISTIC ===== */
-#statistic {
-    background-color: #1A1A19; 
-    color: #ffce10; 
-    font-size: medium;
-}
-
-#statistic > .wrapper {
-    padding: 50px;
-    width: 80%;
-}
-
-/* ===== CONTACT / SOCIAL LINKS ===== */
-#contact {
-    background-color: #1A1A19;
-    color: #F8F5E9;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#contact h2 {
-    color: #ffce10;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.social-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #F8F5E9;
-    background-color: #292929;
-    padding: 12px 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.social-item:hover {
-    background-color: #ffce10;
-    color: #1A1A19;
-    transform: translateY(-4px);
-}
-
-.social-item img {
-    width: 35px;
-    height: 35px;
-}
-
-.social-item span {
-    font-size: 18px;
-    font-weight: bold;
+    padding: 20px 40px;
 }
 
 /* ===== ABOUT / TENTANG SAYA ===== */
 #tentang-saya {
     background-color: #e0e0e0;
-    padding: 100px 0;
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
-    font-family: "Roboto Slab", serif;
 }
 
 .about-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     max-width: 1000px;
-    width: 90%;
+    width: 100%;
     background-color: #1A1A19;
     border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    flex-wrap: wrap;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
 .about-photo img {
     width: 280px;
-    height: 350px;
-    object-fit: cover;
+    height: auto;
     border-radius: 15px;
 }
 
 .about-text {
     flex: 1;
-    text-align: left;
     color: #e0e0e0;
 }
 
 .about-text h2 {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
 .about-text h3 {
+    font-size: 36px;
     color: #ffce10;
-    font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .about-text p {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* ===== EDUCATION / PENDIDIKAN ===== */
 #pendidikan {
-    background-color: #1A1A19; 
-    padding: 60px 0;
+    background-color: #1A1A19;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
 }
 
 .education-wrapper {
-    background-color: #ffce10; 
-    border-radius: 20px;
-    padding: 40px;
+    width: 100%;
     max-width: 900px;
-    width: 90%;
+    background-color: #ffce10;
+    border-radius: 20px;
+    padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -264,42 +196,27 @@ header {
     font-size: 28px;
     color: #333;
     margin-bottom: 40px;
-    letter-spacing: 1px;
-}
-
-.education-group {
-    margin-bottom: 50px;
-}
-
-.education-group h3 {
-    font-size: 22px;
-    color: #444;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #999;
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
 .education-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 25px;
-    margin-top: 20px;
+    justify-content: center;
 }
 
 .education-card {
     background: #fff;
+    width: 180px;
     border-radius: 15px;
     padding: 20px;
-    width: 180px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .education-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 .education-card img {
@@ -320,21 +237,67 @@ header {
     color: #666;
 }
 
-/* ===== LINKS / ANCHOR ===== */
+/* ===== CONTACT / SOCIAL LINKS ===== */
+#contact {
+    background-color: #1A1A19;
+    color: #F8F5E9;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#contact h2 {
+    color: #ffce10;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #F8F5E9;
+    background-color: #292929;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.social-item:hover {
+    background-color: #ffce10;
+    color: #1A1A19;
+}
+
+.social-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-item span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ===== LINKS ===== */
 a {
     text-decoration: none;
     color: #333;
-    text-shadow: none;
-    font-size: medium;
-    text-transform: none;
 }
 
 /* ===== RESPONSIVE HP ===== */
 @media (max-width: 768px) {
-    /* Nav */
+
     nav {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 
     nav .menu ul {
@@ -346,18 +309,18 @@ a {
         font-size: 14px;
     }
 
-    /* Header */
     header {
+        min-height: 80vh;
         padding: 40px 15px;
-        justify-content: flex-end;
-        min-height: auto;
+        justify-content: center;
     }
 
-    header h1 {
+    .header-jumbotron h5 {
         font-size: 28px;
+        line-height: 1.2;
     }
 
-    header h2, header p {
+    .header-jumbotron p {
         font-size: 14px;
     }
 
@@ -366,7 +329,6 @@ a {
         padding: 10px 20px;
     }
 
-    /* About */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -378,13 +340,11 @@ a {
         height: auto;
     }
 
-    /* Education */
     .education-grid {
         flex-direction: column;
         gap: 15px;
     }
 
-    /* Contact / Social Links */
     .social-links {
         flex-direction: column;
         gap: 15px;
@@ -393,7 +353,7 @@ a {
 
     .social-item {
         padding: 8px 15px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .social-item img {
