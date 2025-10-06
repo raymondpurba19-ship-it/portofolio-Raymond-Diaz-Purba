@@ -65,7 +65,7 @@ header {
     color: white;
     letter-spacing: 4px;
     text-shadow: 0 0 6px rgba(0,0,0,0.8);
-    padding: 60px 20px;
+    padding: 60px 20px 120px 20px; /* padding bawah lebih besar supaya button turun */
     position: relative;
 }
 
@@ -110,7 +110,7 @@ header {
 
 /* ===== BUTTONS ===== */
 .header-jumbotron .button-xl {
-    margin-top: 30px; /* jarak bawah ke tulisan header */
+    margin-top: 60px; /* button turun lebih jauh dari teks header */
 }
 
 .button {
@@ -192,7 +192,7 @@ header {
     max-width: 1000px;
     background-color: #ffce10;
     border-radius: 20px;
-    padding: 60px 20px; /* tambah padding atas bawah */
+    padding: 80px 20px; /* padding atas bawah lebih besar */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
@@ -211,7 +211,7 @@ header {
 .education-group h3 {
     font-size: 22px;
     color: #444;
-    margin: 40px 0 20px 0; /* jarak atas bawah */
+    margin: 50px 0 25px 0; /* jarak atas & bawah lebih jelas */
     border-bottom: 2px solid #999;
     display: inline-block;
     padding-bottom: 5px;
@@ -325,7 +325,7 @@ a {
 
     header {
         min-height: 80vh;
-        padding: 40px 15px;
+        padding: 40px 15px 120px 15px; /* tetap ada padding bawah */
         justify-content: center;
     }
 
