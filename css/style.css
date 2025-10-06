@@ -193,7 +193,7 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* center content */
+    align-items: center; /* center container */
 }
 
 .education-group {
@@ -207,7 +207,7 @@ header {
 .education-group h3 {
     font-size: 22px;
     color: #444;
-    margin-bottom: 20px; /* jarak antar judul & card */
+    margin-bottom: 20px;
     border-bottom: 2px solid #999;
     display: inline-block;
     padding-bottom: 5px;
@@ -216,7 +216,7 @@ header {
 .education-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* center semua card */
+    justify-content: center; /* semua card center */
     gap: 25px;
     margin-top: 20px;
     width: 100%;
@@ -227,7 +227,7 @@ header {
     width: 180px;
     border-radius: 15px;
     padding: 20px;
-    text-align: center;
+    text-align: center; /* semua content card center */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
@@ -243,15 +243,9 @@ header {
     margin-bottom: 10px;
 }
 
-.education-card h4 {
-    font-size: 15px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
+.education-card h4,
 .education-card p {
-    font-size: 13px;
-    color: #666;
+    text-align: center; /* nama sekolah & tahun center */
 }
 
 /* ===== CONTACT / SOCIAL LINKS ===== */
